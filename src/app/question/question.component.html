@@ -1,0 +1,12 @@
+<div>
+  <div>{{questionText}}</div>
+  <div *ngFor="let option of answerOptions">
+    <div>
+      <input type="radio" name={{questionText}} value={{option}} (click)="checkSelection(option)">
+      <span>{{option}}</span>
+    </div>
+  </div>
+  <div>{{correctAnswer}}</div>
+  <div *ngIf="correctIsSelected">That is correct!</div>
+  <div *ngIf="!correctIsSelected">That is not correct!</div>
+</div>
