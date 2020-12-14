@@ -9,4 +9,6 @@
   <div>{{correctAnswer}}</div>
   <div *ngIf="correctIsSelected">That is correct!</div>
   <div *ngIf="!correctIsSelected">That is not correct!</div>
+  <!--<div (click)="sendScore(correctIsSelected? 1 : 0)">Submit</div>-->
+  <div>Submitted: {{this.submitted}}</div>
 </div>
