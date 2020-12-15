@@ -1,0 +1,11 @@
+<p>slider works!</p>
+<div>{{currentDisplayed}}</div>
+<div *ngFor="let question of questions; let i = index">
+  <!--This doesn't work because its actually creatng a new component every time instead of cycling through them-->
+  <div>
+    <!--<app-question [inputTest]="question" *ngIf="i === currentDisplayed"></app-question>-->
+    <app-question [inputTest]="question" (scoreEvent)="sendScore($event)" [hidden]="i !== currentDisplayed"></app-question>
+  </div>
+</div>
+<div (click)="next()">NEXT</div>
+<div (click)="prev()">PREV</div>

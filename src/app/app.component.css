@@ -1,0 +1,20 @@
+:root{
+  --gunmetal: #333745ff;
+  --raspberry-red: #c33149ff;
+  --carolina-blue: #009ddcff;
+  --light-cyan: #e0fbfcff;
+  --green-cyan: #009b72ff;
+}
+
+.question {
+  width: 500px;
+  padding: 10px;
+  margin-bottom:10px;
+  border-color: #009ddcff;
+  border-style: solid;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 15px;
+  border-width: 2px;
+  background-color: #e0fbfcff;
+}

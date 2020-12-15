@@ -4,7 +4,7 @@ import { Question } from '../question';
 @Component({
   selector: 'app-question',
   templateUrl: './question.component.html',
-  styleUrls: ['./question.component.css']
+  styleUrls: ['../app.component.css']
 })
 export class QuestionComponent implements OnInit {
   questionText: string;
@@ -17,14 +17,16 @@ export class QuestionComponent implements OnInit {
   @Input()
   inputTest: Question;
   @Output()
-  scoreEvent = new EventEmitter<number>()
+  scoreEvent = new EventEmitter<number>();
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
     this.questionText = this.inputTest.questionText;
     this.answerOptions = this.inputTest.options;
     this.correctAnswer = this.inputTest.correctAnswer;
+    console.log('initialized');
   }
 
   checkSelection(selection): void {
