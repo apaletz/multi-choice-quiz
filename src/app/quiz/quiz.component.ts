@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Question} from '../question';
 import { QuestionComponent} from '../question/question.component';
 import { QuestionService} from '../question.service';
+import Utils from '../utils';
 
 @Component({
   selector: 'app-quiz',
@@ -18,7 +19,12 @@ export class QuizComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.questions = this.questionService.getQuestions();
+    this.questionService.getQuestions().subscribe(resp => {
+      console.log(resp);
+      console.log(resp.questions);
+      this.questions = resp.questions;
+      Utils.shuffle(this.questions);
+    });
 
   }
   addToScoreTotal(questionScore: number): void{

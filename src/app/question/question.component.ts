@@ -1,5 +1,6 @@
 import { Component, OnInit, OnChanges, SimpleChanges, Input, Output, EventEmitter } from '@angular/core';
 import { Question } from '../question';
+import Utils from '../utils';
 
 @Component({
   selector: 'app-question',
@@ -25,6 +26,7 @@ export class QuestionComponent implements OnInit {
   ngOnInit(): void {
     this.questionText = this.inputTest.questionText;
     this.answerOptions = this.inputTest.options;
+    Utils.shuffle(this.answerOptions);
     this.correctAnswer = this.inputTest.correctAnswer;
     console.log('initialized');
   }
@@ -71,11 +73,3 @@ export class QuestionComponent implements OnInit {
     this.scoreEvent.emit(score);
   }
 }
-
-/*
-* Make quiz component
-* Quiz is made of multiple questions
-* Quiz receives questions from question service and maps them to question components
-*
-*
-* */
