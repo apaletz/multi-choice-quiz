@@ -1,11 +1,19 @@
-<p>slider works!</p>
-<div>{{currentDisplayed}}</div>
-<div *ngFor="let question of questions; let i = index">
-  <!--This doesn't work because its actually creatng a new component every time instead of cycling through them-->
-  <div>
-    <!--<app-question [inputTest]="question" *ngIf="i === currentDisplayed"></app-question>-->
-    <app-question [inputTest]="question" (scoreEvent)="sendScore($event)" [hidden]="i !== currentDisplayed"></app-question>
+<div style="display: flex;
+            flex-direction: column;
+            margin-left: auto;
+            margin-right: auto;">
+  <div *ngFor="let question of questions; let i = index" style="margin-left: auto;
+            margin-right: auto;">
+    <div>
+      <app-question [inputTest]="question" (scoreEvent)="sendScore($event)" [hidden]="i !== currentDisplayed"></app-question>
+    </div>
   </div>
+  <span style="width: 420px; display: flex;
+               justify-content: space-between;
+               margin-left: auto;
+               margin-right: auto">
+    <div (click)="prev()" class = button style="display: inline; justify-content: right;">PREV</div>
+    <div (click)="next()" class = button style="display: inline; justify-content: left;">NEXT</div>
+  </span>
 </div>
-<div (click)="next()">NEXT</div>
-<div (click)="prev()">PREV</div>
+

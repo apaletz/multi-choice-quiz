@@ -1,9 +1,9 @@
 :root{
-  --gunmetal: #333745ff;
-  --raspberry-red: #c33149ff;
-  --carolina-blue: #009ddcff;
-  --light-cyan: #e0fbfcff;
-  --green-cyan: #009b72ff;
+  --gunmetal: #333745;
+  --raspberry-red: #c33149;
+  --carolina-blue: #009ddc;
+  --light-cyan: #e0fbfc;
+  --green-cyan: #009b72;
 }
 
 .question {
@@ -16,5 +16,14 @@
   -moz-border-radius: 5px;
   border-radius: 15px;
   border-width: 2px;
-  background-color: #e0fbfcff;
+  background-color: #e0fbfc;
+}
+
+.button {
+  padding: 10px;
+  border-color: #333745;
+  border-style: solid;
+  border-color: rgba(51, 55, 69, 0.4);
+  border-radius: 15px;
+  background-color: rgba(51, 55, 69, 0.03);
 }

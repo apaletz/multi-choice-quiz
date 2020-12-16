@@ -1,0 +1,39 @@
+{
+  "questions": [
+    {
+      "questionText": "Which of the following is not a berry?",
+      "options": [
+        "Banana", "Chilli Pepper", "Strawberry"
+      ],
+      "correctAnswer": "Strawberry"
+    },
+    {
+      "questionText": "What studio made the game \"Don't Starve\"?",
+      "options": [
+        "Ubisoft", "Klei", "Bethesda"
+      ],
+      "correctAnswer": "Klei"
+    },
+    {
+      "questionText": "What is a baby goat called?",
+      "options": [
+        "A kid", "A goatling", "A youngling"
+        ],
+        "correctAnswer": "A kid"
+    },
+    {
+      "questionText": "Where does the Marquis De Carabas reside?",
+      "options": [
+        "The New York subway system", "London Below", "Atlantis"
+      ],
+      "correctAnswer": "London Below"
+    },
+    {
+      "questionText": "How many hearts does an octopus have?",
+      "options": [
+        "8", "1", "3"
+      ],
+      "correctAnswer": "3"
+    }
+  ]
+}

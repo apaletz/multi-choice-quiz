@@ -5,7 +5,7 @@ import { Question } from '../question';
 @Component({
   selector: 'app-slider',
   templateUrl: './slider.component.html',
-  styleUrls: ['./slider.component.css']
+  styleUrls: ['./slider.component.css', '../app.component.css']
 })
 export class SliderComponent implements OnInit {
   @Output()
