@@ -7,23 +7,26 @@
 }
 
 .question {
-  width: 500px;
-  padding: 10px;
-  margin-bottom:10px;
-  border-color: #009ddcff;
-  border-style: solid;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 15px;
-  border-width: 2px;
   background-color: #e0fbfc;
+  padding: 10px;
+  border-bottom: solid white 2px;
 }
 
 .button {
+  background-color: rgba(51, 55, 69, 0.2);
+  border-left: solid white 1px;
+  border-right: solid white 1px;
   padding: 10px;
-  border-color: #333745;
-  border-style: solid;
-  border-color: rgba(51, 55, 69, 0.4);
-  border-radius: 15px;
-  background-color: rgba(51, 55, 69, 0.03);
+}
+
+.button-left {
+  padding: 10px;
+  background-color: rgba(51, 55, 69, 0.2);
+  border-right: solid white 1px;
+}
+
+.button-right {
+  padding: 10px;
+  background-color: rgba(51, 55, 69, 0.2);
+  border-left: solid white 1px;
 }

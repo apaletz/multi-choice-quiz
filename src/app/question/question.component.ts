@@ -14,6 +14,8 @@ export class QuestionComponent implements OnInit {
   correctIsSelected = false;
   firstTry = true;
   @Input()
+  questionNumber: number;
+  @Input()
   submitted: boolean;
   @Input()
   inputTest: Question;

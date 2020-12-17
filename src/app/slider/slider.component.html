@@ -2,18 +2,22 @@
             flex-direction: column;
             margin-left: auto;
             margin-right: auto;">
-  <div *ngFor="let question of questions; let i = index" style="margin-left: auto;
-            margin-right: auto;">
-    <div>
-      <app-question [inputTest]="question" (scoreEvent)="sendScore($event)" [hidden]="i !== currentDisplayed"></app-question>
+  <div style="border-radius: 15px; border-style: solid; border-width: 2px; margin-left: auto;
+       margin-right: auto;
+        overflow: hidden;">
+    <div *ngFor="let question of questions; let i = index" style="margin-left: auto;
+              margin-right: auto;">
+      <div>
+        <app-question [inputTest]="question" [questionNumber]="i+1" (scoreEvent)="sendScore($event)" [hidden]="i !== currentDisplayed"></app-question>
+      </div>
     </div>
+    <span style="width: 500px; display: flex;
+                 flex-direction: row;">
+      <div (click)="prev()" class = "button-left" style="flex: 1; text-align: center">PREV</div>
+        <div *ngFor="let question of questions; let i = index" style="flex: 1">
+          <div (click)="goToQuestion(i)" class="button" style="flex: 4; margin: auto; text-align: center;">{{i+1}}</div>
+        </div>
+      <div (click)="next()" class = "button-right" style="flex: 1; text-align: center">NEXT</div>
+    </span>
   </div>
-  <span style="width: 420px; display: flex;
-               justify-content: space-between;
-               margin-left: auto;
-               margin-right: auto">
-    <div (click)="prev()" class = button style="display: inline; justify-content: right;">PREV</div>
-    <div (click)="next()" class = button style="display: inline; justify-content: left;">NEXT</div>
-  </span>
 </div>
-

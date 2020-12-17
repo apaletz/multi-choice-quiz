@@ -29,7 +29,9 @@ export class SliderComponent implements OnInit {
   prev(): void {
     this.currentDisplayed = (( this.currentDisplayed - 1 ) + 3) % this.questions.length;
   }
-
+  goToQuestion(i): void {
+    this.currentDisplayed = i;
+  }
   sendScore(score: number): any {
     this.sliderScoreSender.emit(score);
   }

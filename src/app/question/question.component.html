@@ -1,14 +1,9 @@
 <div class = "question">
-  <div>{{questionText}}</div>
-  <div *ngFor="let option of answerOptions">
-    <div>
+  <div>{{questionNumber}}. {{questionText}}</div>
+  <div *ngFor="let option of answerOptions" style="margin-left: 12px;">
+    <div style="margin-bottom: 5px;">
       <input type="radio" name={{questionText}} value={{option}} (click)="checkSelection(option)">
       <span>{{option}}</span>
     </div>
   </div>
-  <!--<div>{{correctAnswer}}</div>-->
-  <div *ngIf="correctIsSelected">That is correct!</div>
-  <div *ngIf="!correctIsSelected">That is not correct!</div>
-  <!--<div (click)="sendScore(correctIsSelected? 1 : 0)">Submit</div>-->
-  <!--<div>Submitted: {{this.submitted}}</div>-->
-</div>
+</div>g
